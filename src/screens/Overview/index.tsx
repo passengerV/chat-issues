@@ -11,7 +11,8 @@ import {
 import {useAppDispatch} from '../../hooks';
 import {setConversationId} from '../../features/chat';
 
-const {ENTERING_ANIMATION_ISSUE, LAYOUT_ANIMATION_ISSUE} = NavigationRoutes;
+const {ENTERING_ANIMATION_ISSUE, LAYOUT_ANIMATION_ISSUE, ANIMATED_STYLE_ISSUE} =
+  NavigationRoutes;
 
 export const OverviewScreen: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -27,6 +28,10 @@ export const OverviewScreen: React.FC = () => {
     navigate(LAYOUT_ANIMATION_ISSUE);
   }, [dispatch, navigate]);
 
+  const handleOnPressAnimationStyleIssue = useCallback(() => {
+    navigate(ANIMATED_STYLE_ISSUE);
+  }, [navigate]);
+
   return (
     <Screen>
       <Content>
@@ -35,6 +40,9 @@ export const OverviewScreen: React.FC = () => {
         </Button>
         <Button onPress={handleOnPressLayoutIssue}>
           <StyledText content="FlatList Layout issue" />
+        </Button>
+        <Button onPress={handleOnPressAnimationStyleIssue}>
+          <StyledText content="Animated style issue" />
         </Button>
       </Content>
     </Screen>

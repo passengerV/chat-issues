@@ -7,6 +7,7 @@ import {
   LayoutIssueScreen,
   LayoutIssueDescriptionScreen,
   EnteringAnimationIssueDescriptionScreen,
+  AnimatedStyleIssueScreen,
 } from '../screens';
 
 const Stack = createNativeStackNavigator<NavigatorParams>();
@@ -17,6 +18,7 @@ const {
   LAYOUT_ANIMATION_ISSUE,
   ENTERING_ANIMATION_ISSUE_DESCRIPTION,
   LAYOUT_ANIMATION_ISSUE_DESCRIPTION,
+  ANIMATED_STYLE_ISSUE,
 } = NavigationRoutes;
 
 export const Navigation: React.FC<Partial<StackNavigatorProps>> = ({
@@ -45,6 +47,10 @@ export const Navigation: React.FC<Partial<StackNavigatorProps>> = ({
         name={LAYOUT_ANIMATION_ISSUE_DESCRIPTION}
         component={LayoutIssueDescriptionScreen}
         options={{presentation: 'fullScreenModal'}}
+      />
+      <Stack.Screen
+        name={ANIMATED_STYLE_ISSUE}
+        component={AnimatedStyleIssueScreen}
       />
     </Stack.Navigator>
   );

@@ -6,6 +6,7 @@ export const NavigationRoutes = {
   ENTERING_ANIMATION_ISSUE_DESCRIPTION: 'entering-animation-issue-description',
   LAYOUT_ANIMATION_ISSUE: 'layout-animation-issue',
   LAYOUT_ANIMATION_ISSUE_DESCRIPTION: 'layout-animation-issue-description',
+  ANIMATED_STYLE_ISSUE: 'animated-style-issue',
 } as const;
 
 const {
@@ -14,6 +15,7 @@ const {
   LAYOUT_ANIMATION_ISSUE,
   ENTERING_ANIMATION_ISSUE_DESCRIPTION,
   LAYOUT_ANIMATION_ISSUE_DESCRIPTION,
+  ANIMATED_STYLE_ISSUE,
 } = NavigationRoutes;
 
 export type NavigatorParams = {
@@ -22,6 +24,7 @@ export type NavigatorParams = {
   [ENTERING_ANIMATION_ISSUE_DESCRIPTION]: undefined;
   [LAYOUT_ANIMATION_ISSUE]: undefined;
   [LAYOUT_ANIMATION_ISSUE_DESCRIPTION]: undefined;
+  [ANIMATED_STYLE_ISSUE]: undefined;
 };
 
 export type NavigationProps = NativeStackNavigationProp<NavigatorParams>;
